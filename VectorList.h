@@ -152,10 +152,6 @@ template <typename T>
 void VectorList<T>::set(unsigned long index, T element) {
 	std::lldiv_t div_result = std::lldiv(index, this->plus_size);
 
-	if (index == 2000) {
-		std::cout << std::endl;
-	}
-
 	Cell<T>* cell = this->get_cell(div_result.quot);
 
 	cell->set(div_result.rem, element);
